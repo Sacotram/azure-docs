@@ -19,6 +19,9 @@ This set of articles explains how to work with Azure Functions bindings for IoT 
 
 [!INCLUDE [functions-bindings-event-hubs](../../includes/functions-bindings-event-hubs.md)]
 
+##Connections
+The connection property is a reference to environment configuration that contains name of an application setting containing a connection string. For an IoT Hub trigger, the connection string is available in Built-in endpoints menu of the IoT Hub under the name of Event Hub-compatible endpoint. (https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-read-builtin).  The connection string should be edited to remove the EntityPath if this property is already added as an attribute in the trigger.
+
 ## Next steps
 
 - [Respond to events sent to an event hub event stream (Trigger)](./functions-bindings-event-iot-trigger.md)
